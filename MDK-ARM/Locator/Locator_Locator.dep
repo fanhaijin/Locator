@@ -39,8 +39,8 @@ I (../Core/Inc/gpio.h)(0x6A1D60B0)
 I (../interface/int_DS3553.h)(0x6A1FEDB0)
 I (../interface/int_GPS.h)(0x6A1E85C1)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\string.h)(0x693607DB)
-I (../common/com_debug.h)(0x6A1E89B3)
-I (../interface/int_QS100.h)(0x6A1F8554)
+I (../common/com_debug.h)(0x6A203CFB)
+I (../interface/int_QS100.h)(0x6A202781)
 I (../application/app_communication.h)(0x6A2014ED)
 I (../middleware/cJSON/cJSON.h)(0x6642C1DF)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\stdlib.h)(0x693607DB)
@@ -700,9 +700,9 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h)(0x69FD7E85)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h)(0x69FD7E85)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x69FD7E85)
 F (..\common\com_debug.c)(0x6A1E95D7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../common -I ../interface -I ../application -I ../middleware/cJSON-I.\RTE\_Locator-ID:\software\Keil_v5\ARM\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include-ID:\software\Keil_v5\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o locator\com_debug.o --depend locator\com_debug.d)
-I (..\common\com_debug.h)(0x6A1E89B3)
+I (..\common\com_debug.h)(0x6A203CFB)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\string.h)(0x693607DB)
-F (..\interface\int_DS3553.c)(0x6A1FEDA0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../common -I ../interface -I ../application -I ../middleware/cJSON-I.\RTE\_Locator-ID:\software\Keil_v5\ARM\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include-ID:\software\Keil_v5\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o locator\int_ds3553.o --depend locator\int_ds3553.d)
+F (..\interface\int_DS3553.c)(0x6A202208)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../common -I ../interface -I ../application -I ../middleware/cJSON-I.\RTE\_Locator-ID:\software\Keil_v5\ARM\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include-ID:\software\Keil_v5\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o locator\int_ds3553.o --depend locator\int_ds3553.d)
 I (..\interface\int_DS3553.h)(0x6A1FEDB0)
 I (../Core/Inc/i2c.h)(0x6A1D60B1)
 I (../Core/Inc/main.h)(0x6A1E7618)
@@ -769,8 +769,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x69FD7E85)
 I (../Core/Inc/usart.h)(0x6A1E7618)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\stdio.h)(0x693607DA)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\string.h)(0x693607DB)
-F (..\interface\int_QS100.c)(0x6A201F28)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../common -I ../interface -I ../application -I ../middleware/cJSON-I.\RTE\_Locator-ID:\software\Keil_v5\ARM\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include-ID:\software\Keil_v5\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o locator\int_qs100.o --depend locator\int_qs100.d)
-I (..\interface\int_QS100.h)(0x6A1F8554)
+F (..\interface\int_QS100.c)(0x6A203C2F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../common -I ../interface -I ../application -I ../middleware/cJSON-I.\RTE\_Locator-ID:\software\Keil_v5\ARM\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include-ID:\software\Keil_v5\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o locator\int_qs100.o --depend locator\int_qs100.d)
+I (..\interface\int_QS100.h)(0x6A202781)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\string.h)(0x693607DB)
 I (../Core/Inc/gpio.h)(0x6A1D60B0)
 I (../Core/Inc/main.h)(0x6A1E7618)
@@ -804,8 +804,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h)(0x69FD7E85)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x69FD7E85)
 I (../Core/Inc/usart.h)(0x6A1E7618)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\stdio.h)(0x693607DA)
-I (../common/com_debug.h)(0x6A1E89B3)
-F (..\application\app_communication.c)(0x6A2019C9)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../common -I ../interface -I ../application -I ../middleware/cJSON-I.\RTE\_Locator-ID:\software\Keil_v5\ARM\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include-ID:\software\Keil_v5\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o locator\app_communication.o --depend locator\app_communication.d)
+I (../common/com_debug.h)(0x6A203CFB)
+F (..\application\app_communication.c)(0x6A202975)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../common -I ../interface -I ../application -I ../middleware/cJSON-I.\RTE\_Locator-ID:\software\Keil_v5\ARM\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include-ID:\software\Keil_v5\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o locator\app_communication.o --depend locator\app_communication.d)
 I (..\application\app_communication.h)(0x6A2014ED)
 I (../interface/int_DS3553.h)(0x6A1FEDB0)
 I (../Core/Inc/i2c.h)(0x6A1D60B1)
@@ -843,8 +843,8 @@ I (../Core/Inc/gpio.h)(0x6A1D60B0)
 I (../Core/Inc/usart.h)(0x6A1E7618)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\stdio.h)(0x693607DA)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\string.h)(0x693607DB)
-I (../interface/int_QS100.h)(0x6A1F8554)
-I (../common/com_debug.h)(0x6A1E89B3)
+I (../interface/int_QS100.h)(0x6A202781)
+I (../common/com_debug.h)(0x6A203CFB)
 I (../middleware/cJSON/cJSON.h)(0x6642C1DF)
 I (D:\software\Keil_v5\ARM\arm5_compiler\include\stdlib.h)(0x693607DB)
 F (..\middleware\cJSON\cJSON.c)(0x6642C1DF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../common -I ../interface -I ../application -I ../middleware/cJSON-I.\RTE\_Locator-ID:\software\Keil_v5\ARM\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include-ID:\software\Keil_v5\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o locator\cjson.o --depend locator\cjson.d)

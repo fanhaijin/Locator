@@ -75,7 +75,7 @@ void app_communication_send(uint8_t *ip, uint16_t port)
     // 释放JSON对象
     cJSON_Delete(root);
     // 4. 发送数据通过NB-IOT给云端
-    int_qs100_clientTcp(ip, port, (uint8_t *)str, strlen(str));
+    int_qs100_clientTcp(ip, port, (uint8_t *)str, strlen(str),1);
     // 释放内存空间
     free(str);
 }

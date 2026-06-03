@@ -56,7 +56,7 @@ static HAL_StatusTypeDef int_qs100_getNetwork(void)
     if (strstr((char *)QS_data, "+CGATT"))
     {
         sscanf((char *)QS_data, "%*[^:]:%hhd", &nsocr_val);
-        debug_printfln("nsocr_val = %d\r\n",nsocr_val);
+        debug_printfln("nsocr_val = %d\r\n", nsocr_val);
         // 缓冲区大小清空
         QS_data_Length = 0;
         return HAL_OK;
@@ -74,7 +74,7 @@ static HAL_StatusTypeDef int_qs100_createTcp(void)
     if (strstr((char *)QS_data, "OK"))
     {
         sscanf((char *)QS_data, "%*[^:]:%hhd", &socket_Id);
-        debug_printfln("socket_Id = %d\r\n",socket_Id);
+        debug_printfln("socket_Id = %d\r\n", socket_Id);
         // 缓冲区大小清空
         QS_data_Length = 0;
         return HAL_OK;
@@ -84,7 +84,6 @@ static HAL_StatusTypeDef int_qs100_createTcp(void)
 // 3.连接TCP服务器
 static HAL_StatusTypeDef int_qs100_connectTcp(uint8_t *ip, uint16_t port)
 {
-
     char cmd[50];
     sprintf(cmd, "AT+NSOCO=%d,%s,%d\r\n", socket_Id, ip, port);
     int_qs_sendCmd((uint8_t *)cmd);
@@ -95,7 +94,7 @@ static HAL_StatusTypeDef int_qs100_connectTcp(uint8_t *ip, uint16_t port)
     return HAL_ERROR;
 }
 // 4.发送TCP数据
-static HAL_StatusTypeDef int_qs100_sendTcp(uint8_t *data, uint16_t data_len)
+static HAL_StatusTypeDef int_qs100_sendTcp(uint8_t *data, uint16_t data_len, uint8_t sequence)
 {
     // 把字符串转化为16进制
     for (int i = 0; i < data_len; i++)
@@ -103,11 +102,31 @@ static HAL_StatusTypeDef int_qs100_sendTcp(uint8_t *data, uint16_t data_len)
         sprintf(&output_buffer[i * 2], "%02X", data[i]);
     }
     char cmd[512];
-    sprintf(cmd, "AT+NSOSD=%d,%d,%s\r\n", socket_Id, data_len, output_buffer);
+    sprintf(cmd, "AT+NSOSD=%d,%d,%s,0x200,%d\r\n", socket_Id, data_len, output_buffer, sequence);
     int_qs_sendCmd((uint8_t *)cmd);
     if (strstr((char *)QS_data, "OK"))
     {
-        return HAL_OK;
+        // 查询发送状态+SEQUENCN
+        char seqCmd[50];
+        sprintf(seqCmd, "AT+SEQUENCE=%d,%d\r\n", socket_Id, sequence);
+        uint32_t end_time = HAL_GetTick() + 2000;
+        while (HAL_GetTick() < end_time)
+        {
+            // 1：发送成功，如果返回1，则标识发送数据成功，返回HAL_OK
+            int_qs_sendCmd((char *)seqCmd);
+            if (strstr((char *)QS_data, "1"))
+            {
+                break;
+            }
+            else
+            {
+                HAL_Delay(100);
+            }
+        }
+        if (HAL_GetTick() < end_time)
+        {
+            return HAL_OK;
+        }
     }
     return HAL_ERROR;
 }
@@ -123,7 +142,7 @@ static HAL_StatusTypeDef int_qs100_endSocket(void)
     }
     return HAL_ERROR;
 }
-HAL_StatusTypeDef int_qs100_clientTcp(uint8_t *ip, uint16_t port, uint8_t *data, uint16_t data_len)
+HAL_StatusTypeDef int_qs100_clientTcp(uint8_t *ip, uint16_t port, uint8_t *data, uint16_t data_len, uint8_t sequence)
 {
     // 1. 请求上网信息
     uint8_t cnt = 10;
@@ -135,14 +154,14 @@ HAL_StatusTypeDef int_qs100_clientTcp(uint8_t *ip, uint16_t port, uint8_t *data,
     if (cnt == 0)
     {
         debug_printfln("QS100 No Network timeout!\r\n");
-        return;
+        return HAL_ERROR;
     }
     debug_printfln("QS100 Network OK!\r\n");
     // 2. 创建TCP连接
     if (int_qs100_createTcp() != HAL_OK)
     {
         debug_printfln("QS100 Create TCP timeout!\r\n");
-        return;
+        return HAL_ERROR;
     }
     debug_printfln("QS100 Create TCP OK!\r\n");
     // 3.连接到TCP服务器
@@ -154,14 +173,14 @@ HAL_StatusTypeDef int_qs100_clientTcp(uint8_t *ip, uint16_t port, uint8_t *data,
     if (cnt == 0)
     {
         debug_printfln("QS100 Connect TCP timeout!\r\n");
-        return;
+        return HAL_ERROR;
     }
     debug_printfln("QS100 Connect TCP OK!\r\n");
     // 4. 发送TCP数据
-    if (int_qs100_sendTcp(data, data_len) != HAL_OK)
+    if (int_qs100_sendTcp(data, data_len, sequence) != HAL_OK)
     {
         debug_printfln("QS100 Send Data timeout!\r\n");
-        return;
+        return HAL_ERROR;
     }
     debug_printfln("QS100 Send Data OK!\r\n");
     // 5. 关闭TCP Socket
