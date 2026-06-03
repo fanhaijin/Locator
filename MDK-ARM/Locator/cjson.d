@@ -1,0 +1,10 @@
+locator\cjson.o: ..\middleware\cJSON\cJSON.c
+locator\cjson.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\string.h
+locator\cjson.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\stdio.h
+locator\cjson.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\math.h
+locator\cjson.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\stdlib.h
+locator\cjson.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\limits.h
+locator\cjson.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\ctype.h
+locator\cjson.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\float.h
+locator\cjson.o: ..\middleware\cJSON\cJSON.h
+locator\cjson.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\stddef.h
