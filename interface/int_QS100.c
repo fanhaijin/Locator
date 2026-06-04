@@ -6,7 +6,6 @@ uint8_t QS_data[1024] = {0};
 uint16_t QS_data_Length = 0;
 uint8_t nsocr_val = 100; // 存 socket，链路号，连网成功返回的
 uint8_t socket_Id = 100; // 存 socket_id，由创建TCP/SocKet创建的
-uint8_t is_Flag = 0;
 char output_buffer[1024];
 static void int_qs_sendCmd(uint8_t *cmd)
 {
@@ -113,14 +112,14 @@ static HAL_StatusTypeDef int_qs100_sendTcp(uint8_t *data, uint16_t data_len, uin
         while (HAL_GetTick() < end_time)
         {
             // 1：发送成功，如果返回1，则标识发送数据成功，返回HAL_OK
-            int_qs_sendCmd((char *)seqCmd);
+            int_qs_sendCmd((uint8_t *)seqCmd);
             if (strstr((char *)QS_data, "1"))
             {
                 break;
             }
             else
             {
-                HAL_Delay(100);
+                HAL_Delay(500);
             }
         }
         if (HAL_GetTick() < end_time)

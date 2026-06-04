@@ -23,7 +23,7 @@
  */
 
 // 如果定义了debug 则在开发环境下  如果没有定义debug 则在生产环境下
-// #define debug // 切换开发和生产环境
+#define debug // 切换开发和生产环境
 
 #define FILENAME (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
 #define _FILENAME (strrchr(FILENAME, '\\') ? strrchr(FILENAME, '\\') + 1 : FILENAME)
