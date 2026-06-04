@@ -141,7 +141,7 @@ static HAL_StatusTypeDef int_qs100_endSocket(void)
     }
     return HAL_ERROR;
 }
-HAL_StatusTypeDef int_qs100_clientTcp(uint8_t *ip, uint16_t port, uint8_t *data, uint16_t data_len, uint8_t sequence)
+HAL_StatusTypeDef int_qs100_send_server(uint8_t *ip, uint16_t port, uint8_t *data, uint16_t data_len, uint8_t sequence)
 {
     // 1. 请求上网信息
     uint8_t cnt = 10;

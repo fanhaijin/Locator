@@ -34,18 +34,24 @@ static void parse_gps_data(void)
             if (gps_flag == 'A')
             {
                 debug_printfln("gps OK\r\n");
-                // $GNRMC,154919.000,A,3028.09110,N,11423.29505,E,3.44,156.11,060525,,,A,V*00
-                // 在读取字符串时要读取指定长度的字符串
-                sscanf((char *)gps_data, "$GNRMC,%10s,A,%lf,%1s,%lf,%1s,%*[^,],%*[^,],%6s,", time, &updateData_Type.lat, updateData_Type.latDir, &updateData_Type.lon, updateData_Type.lonDir, date);
                 break;
             }
             else
             {
                 debug_printfln("gps error\r\n");
-                HAL_Delay(1000);
             }
         }
+        HAL_Delay(1000);
     }
+    // $GNRMC,154919.000,A,3028.09110,N,11423.29505,E,3.44,156.11,060525,,,A,V*00
+    // 解析数据
+    sscanf((char *)gps_data, "$GNRMC,%6c%*[^,],A,%lf,%c,%lf,%1s,%*f,%*f,%6c,",
+           time,
+           &updateData_Type.lat,
+           updateData_Type.latDir,
+           &updateData_Type.lon,
+           updateData_Type.lonDir,
+           date);
     // 对字符串进行转换
     sprintf((char *)updateData_Type.datetime, "20%c%c-%c%c-%c%c %c%c:%c%c:%c%c", date[4], date[5], date[2], date[3], date[0], date[1], time[0], time[1], time[2], time[3], time[4], time[5]);
     // 将经纬度进行转化
@@ -81,7 +87,7 @@ void app_communication_send(uint8_t *ip, uint16_t port)
     // 释放JSON对象
     cJSON_Delete(root);
     // 4. 通过NB-IOT发送数据给云端
-    HAL_StatusTypeDef status = int_qs100_clientTcp(ip, port, (uint8_t *)str, strlen(str), 1);
+    HAL_StatusTypeDef status = int_qs100_send_server(ip, port, (uint8_t *)str, strlen(str), 1);
     if (status == HAL_OK)
     {
         // 释放内存空间
