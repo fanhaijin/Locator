@@ -38,7 +38,7 @@ static void parse_gps_data(void)
             }
             else
             {
-                debug_printfln("gps error\r\n");
+                debug_printfln("gps ERROR\r\n");
             }
         }
         HAL_Delay(1000);
@@ -86,15 +86,16 @@ void app_communication_send(uint8_t *ip, uint16_t port)
     debug_printfln("str : %s\r\n", str);
     // 释放JSON对象
     cJSON_Delete(root);
-    // 4. 通过NB-IOT发送数据给云端
-    HAL_StatusTypeDef status = int_qs100_send_server(ip, port, (uint8_t *)str, strlen(str), 1);
-    if (status == HAL_OK)
-    {
-        // 释放内存空间
-        free(str);
-    }
+    // // 4. 通过NB-IOT发送数据给云端
+    // HAL_StatusTypeDef status = int_qs100_send_server(ip, port, (uint8_t *)str, strlen(str), 1);
+    // // 这里使用第二种方法，所以我先设置为不等于
+    // if (status != HAL_OK)
+    // {
+    //     // 释放内存空间
+    //     free(str);
+    // }
     // 5.使用网关发送数据给云端
-    else
-    {
-    }
+    debug_printfln("send to gateway");
+    int_LoRa_send_data((uint8_t *)str, strlen(str));
+    free(str);
 }

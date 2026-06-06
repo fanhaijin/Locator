@@ -20,6 +20,7 @@
 #include "main.h"
 #include "i2c.h"
 #include "rtc.h"
+#include "spi.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -30,6 +31,7 @@
 #include "com_debug.h"
 #include "int_QS100.h"
 #include "app_communication.h"
+#include "int_LoRa.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -103,6 +105,7 @@ int main(void)
   MX_I2C1_Init();
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   int_DS3553_Reg_Init();
   // uint8_t id = 0;
@@ -113,6 +116,8 @@ int main(void)
   // int_GPS_Init();
   // 初始化QS100
   // int_qs100_init();
+  // 初始化LoRa
+  int_LoRa_init();
   // int_qs100_clientTcp(ip, port, tcp_data, strlen((char *)tcp_data));
   app_communication_init();
   app_communication_send(ip, port);

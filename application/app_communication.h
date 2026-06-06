@@ -5,6 +5,7 @@
 #include "int_QS100.h"
 #include "cJSON.h"
 #include "stdlib.h"
+#include "int_LoRa.h"
 // 修正后的结构体
 typedef struct
 {

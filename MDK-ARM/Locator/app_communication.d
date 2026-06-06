@@ -31,6 +31,7 @@ locator\app_communication.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i
 locator\app_communication.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 locator\app_communication.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h
 locator\app_communication.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
+locator\app_communication.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 locator\app_communication.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 locator\app_communication.o: ../interface/int_GPS.h
 locator\app_communication.o: ../Core/Inc/gpio.h
@@ -41,3 +42,12 @@ locator\app_communication.o: ../interface/int_QS100.h
 locator\app_communication.o: ../common/com_debug.h
 locator\app_communication.o: ../middleware/cJSON/cJSON.h
 locator\app_communication.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\stdlib.h
+locator\app_communication.o: ../interface/int_LoRa.h
+locator\app_communication.o: ..\middleware\E200\ebyte_core.h
+locator\app_communication.o: ..\middleware\E200\ebyte_conf.h
+locator\app_communication.o: ../Core/Inc/spi.h
+locator\app_communication.o: ..\middleware\E200\ebyte_e220x.h
+locator\app_communication.o: ..\middleware\E200\ebyte_conf.h
+locator\app_communication.o: ..\middleware\E200\ebyte_callback.h
+locator\app_communication.o: ..\middleware\E200\ebyte_port.h
+locator\app_communication.o: ..\middleware\E200\ebyte_conf.h

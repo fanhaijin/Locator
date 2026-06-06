@@ -27,4 +27,5 @@ locator\stm32f1xx_hal_dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i
 locator\stm32f1xx_hal_dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 locator\stm32f1xx_hal_dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h
 locator\stm32f1xx_hal_dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
+locator\stm32f1xx_hal_dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 locator\stm32f1xx_hal_dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h

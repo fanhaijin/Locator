@@ -28,9 +28,11 @@ locator\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 locator\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 locator\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h
 locator\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
+locator\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 locator\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 locator\main.o: ../Core/Inc/i2c.h
 locator\main.o: ../Core/Inc/rtc.h
+locator\main.o: ../Core/Inc/spi.h
 locator\main.o: ../Core/Inc/usart.h
 locator\main.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\stdio.h
 locator\main.o: ../Core/Inc/gpio.h
@@ -42,3 +44,11 @@ locator\main.o: ../interface/int_QS100.h
 locator\main.o: ../application/app_communication.h
 locator\main.o: ../middleware/cJSON/cJSON.h
 locator\main.o: D:\software\Keil_v5\ARM\arm5_compiler\Bin\..\include\stdlib.h
+locator\main.o: ../interface/int_LoRa.h
+locator\main.o: ..\middleware\E200\ebyte_core.h
+locator\main.o: ..\middleware\E200\ebyte_conf.h
+locator\main.o: ..\middleware\E200\ebyte_e220x.h
+locator\main.o: ..\middleware\E200\ebyte_conf.h
+locator\main.o: ..\middleware\E200\ebyte_callback.h
+locator\main.o: ..\middleware\E200\ebyte_port.h
+locator\main.o: ..\middleware\E200\ebyte_conf.h

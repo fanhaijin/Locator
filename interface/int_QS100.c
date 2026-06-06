@@ -132,9 +132,9 @@ static HAL_StatusTypeDef int_qs100_sendTcp(uint8_t *data, uint16_t data_len, uin
 // 5.关闭Socket
 static HAL_StatusTypeDef int_qs100_endSocket(void)
 {
-    char endSocket_Cmd[50];
-    sprintf(endSocket_Cmd, "AT+NSOCL=%d\r\n", socket_Id);
-    int_qs_sendCmd((uint8_t *)endSocket_Cmd);
+    char cmd[50];
+    sprintf(cmd, "AT+NSOCL=%d\r\n", socket_Id);
+    int_qs_sendCmd((uint8_t *)cmd);
     if (strstr((char *)QS_data, "OK"))
     {
         return HAL_OK;
