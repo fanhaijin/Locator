@@ -3,7 +3,7 @@
 <title>Static Call Graph - [Locator\Locator.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image Locator\Locator.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Jun 05 22:00:09 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Jun 06 21:23:14 2026
 <BR><P>
 <H3>Maximum Stack Usage =          0 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12,9 +12,9 @@ Call chain for Maximum Stack Depth:</H3>
 <H3>
 Mutually Recursive functions
 </H3> <LI><a href="#[1f]">ADC1_2_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1f]">ADC1_2_IRQHandler</a><BR>
- <LI><a href="#[11c]">print_object</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[116]">print_value</a><BR>
- <LI><a href="#[118]">print_array</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[116]">print_value</a><BR>
- <LI><a href="#[103]">cJSON_Delete</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[103]">cJSON_Delete</a><BR>
+ <LI><a href="#[11a]">print_object</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[114]">print_value</a><BR>
+ <LI><a href="#[116]">print_array</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[114]">print_value</a><BR>
+ <LI><a href="#[102]">cJSON_Delete</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[102]">cJSON_Delete</a><BR>
 </UL>
 <P>
 <H3>
@@ -248,17 +248,17 @@ Global Symbols
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[10b]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
+<P><STRONG><a name="[10a]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_strdup
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_ReadData
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_ReadData
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;internal_alloc
 </UL>
 
-<P><STRONG><a name="[10f]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
+<P><STRONG><a name="[10e]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_Init
 </UL>
 
@@ -270,50 +270,47 @@ Global Symbols
 <P><STRONG><a name="[4c]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs_sendCmd
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_ReadData
+<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_ReadData
 </UL>
 
 <P><STRONG><a name="[e7]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_New_Item
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_New_Item
 </UL>
 
 <P><STRONG><a name="[4e]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[104]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_offset
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+<P><STRONG><a name="[103]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_offset
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_strdup
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs_sendCmd
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_ReadData
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_ReadData
 </UL>
 
-<P><STRONG><a name="[114]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
+<P><STRONG><a name="[112]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
 </UL>
 
 <P><STRONG><a name="[9c]"></a>strrchr</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, strrchr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR><BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_Port_TransmitCallback
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_Port_ReceiveCallback
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs_sendCmd
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
 </UL>
 
 <P><STRONG><a name="[4f]"></a>__0sscanf</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, __0sscanf.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
+<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
 </UL>
 
 <P><STRONG><a name="[6c]"></a>_scanf_string</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, _scanf_str.o(.text))
@@ -351,7 +348,7 @@ Global Symbols
 <P><STRONG><a name="[5f]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
+<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMEA_To_Decimal
 </UL>
 
@@ -362,7 +359,7 @@ Global Symbols
 <P><STRONG><a name="[53]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 0 bytes, dmul.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
+<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMEA_To_Decimal
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_value
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
@@ -380,21 +377,21 @@ Global Symbols
 <P><STRONG><a name="[61]"></a>__aeabi_i2d</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, dflti.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMEA_To_Decimal
 </UL>
 
 <P><STRONG><a name="[62]"></a>__aeabi_ui2d</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, dfltui.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_E220x_SetRfFrequency
 </UL>
 
 <P><STRONG><a name="[63]"></a>__aeabi_d2iz</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, dfixi.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
+<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMEA_To_Decimal
 </UL>
 
@@ -408,18 +405,18 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMEA_To_Decimal
 </UL>
 
-<P><STRONG><a name="[11b]"></a>__aeabi_cdcmpeq</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, cdcmple.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+<P><STRONG><a name="[119]"></a>__aeabi_cdcmpeq</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, cdcmple.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
 </UL>
 
-<P><STRONG><a name="[109]"></a>__aeabi_cdcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdcmple.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
+<P><STRONG><a name="[108]"></a>__aeabi_cdcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdcmple.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
 </UL>
 
 <P><STRONG><a name="[ef]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
+<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
@@ -728,7 +725,7 @@ Global Symbols
 <P><STRONG><a name="[84]"></a>Ebyte_E220x_SetLoraSyncWord</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, ebyte_e220x.o(i.Ebyte_E220x_SetLoraSyncWord))
 <BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_E220x_WriteRegister
 </UL>
-<BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_LoRa_init
+<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_LoRa_init
 <LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_E220x_Init
 </UL>
 
@@ -996,11 +993,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_Reg_Init
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_Port_DelayMs
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs100_init
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs_sendCmd
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_Init
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_getStep
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_getStep
 </UL>
 
 <P><STRONG><a name="[ac]"></a>HAL_GPIO_Init</STRONG> (Thumb, 766 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init))
@@ -1022,7 +1017,7 @@ Global Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_Port_RxenIoControl
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_Port_RstIoControl
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_Init
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_getStep
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_getStep
 </UL>
 
 <P><STRONG><a name="[a0]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f1xx_hal.o(i.HAL_GetTick))
@@ -1043,7 +1038,6 @@ Global Symbols
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs_sendCmd
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
 
@@ -1060,7 +1054,7 @@ Global Symbols
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_RequestMemoryRead
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_getStep
+<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_getStep
 </UL>
 
 <P><STRONG><a name="[a8]"></a>HAL_I2C_Mem_Write</STRONG> (Thumb, 348 bytes, Stack size 0 bytes, stm32f1xx_hal_i2c.o(i.HAL_I2C_Mem_Write))
@@ -1225,7 +1219,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_gps_Rx_Callback
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_RxEventCallback
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs100_init
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_Init
 </UL>
 
@@ -1282,8 +1275,7 @@ Global Symbols
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs_sendCmd
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_WriteCmd
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_WriteCmd
 </UL>
 
 <P><STRONG><a name="[e8]"></a>HAL_UART_TxCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_hal_uart.o(i.HAL_UART_TxCpltCallback))
@@ -1394,11 +1386,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9d]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0printf))
-<BR><BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR><BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_Port_TransmitCallback
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_Port_ReceiveCallback
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs_sendCmd
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
 </UL>
 
 <P><STRONG><a name="[ec]"></a>__0sprintf</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, printfa.o(i.__0sprintf), UNUSED)
@@ -1406,14 +1397,14 @@ Global Symbols
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[115]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0sprintf))
-<BR><BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
+<P><STRONG><a name="[113]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0sprintf))
+<BR><BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
 </UL>
 
 <P><STRONG><a name="[1]"></a>free</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, mallocr.o(i.__free$realloc))
-<BR><BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR><BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 <LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;realloc
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cjson.o(.data)
@@ -1429,85 +1420,84 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
 </UL>
 
-<P><STRONG><a name="[f8]"></a>app_communication_init</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, app_communication.o(i.app_communication_init))
+<P><STRONG><a name="[f8]"></a>app_communication_init</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, app_communication.o(i.app_communication_init))
 <BR><BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_Reg_Init
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs100_init
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[fc]"></a>app_communication_send</STRONG> (Thumb, 374 bytes, Stack size 0 bytes, app_communication.o(i.app_communication_send))
+<P><STRONG><a name="[fb]"></a>app_communication_send</STRONG> (Thumb, 374 bytes, Stack size 0 bytes, app_communication.o(i.app_communication_send))
 <BR><BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strrchr
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_PrintUnformatted
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateObject
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddStringToObject
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddNumberToObject
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_PrintUnformatted
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateObject
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddStringToObject
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddNumberToObject
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Step
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_LoRa_send_data
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Step
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_LoRa_send_data
 <LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[101]"></a>cJSON_AddNumberToObject</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, cjson.o(i.cJSON_AddNumberToObject))
-<BR><BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
+<P><STRONG><a name="[100]"></a>cJSON_AddNumberToObject</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, cjson.o(i.cJSON_AddNumberToObject))
+<BR><BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_item_to_object
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 </UL>
 
-<P><STRONG><a name="[100]"></a>cJSON_AddStringToObject</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cjson.o(i.cJSON_AddStringToObject))
-<BR><BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateString
+<P><STRONG><a name="[ff]"></a>cJSON_AddStringToObject</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cjson.o(i.cJSON_AddStringToObject))
+<BR><BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateString
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_item_to_object
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 </UL>
 
-<P><STRONG><a name="[106]"></a>cJSON_CreateNumber</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, cjson.o(i.cJSON_CreateNumber))
+<P><STRONG><a name="[105]"></a>cJSON_CreateNumber</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, cjson.o(i.cJSON_CreateNumber))
 <BR><BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmple
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_New_Item
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmple
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_New_Item
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 </UL>
-<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddNumberToObject
+<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddNumberToObject
 </UL>
 
-<P><STRONG><a name="[ff]"></a>cJSON_CreateObject</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, cjson.o(i.cJSON_CreateObject))
-<BR><BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_New_Item
+<P><STRONG><a name="[fe]"></a>cJSON_CreateObject</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, cjson.o(i.cJSON_CreateObject))
+<BR><BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_New_Item
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 </UL>
 
-<P><STRONG><a name="[107]"></a>cJSON_CreateString</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, cjson.o(i.cJSON_CreateString))
+<P><STRONG><a name="[106]"></a>cJSON_CreateString</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, cjson.o(i.cJSON_CreateString))
 <BR><BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_strdup
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_New_Item
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_New_Item
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddStringToObject
-</UL>
-
-<P><STRONG><a name="[103]"></a>cJSON_Delete</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, cjson.o(i.cJSON_Delete))
-<BR><BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
-</UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateString
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddStringToObject
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddNumberToObject
+<BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddStringToObject
 </UL>
 
-<P><STRONG><a name="[102]"></a>cJSON_PrintUnformatted</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cjson.o(i.cJSON_PrintUnformatted))
-<BR><BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
+<P><STRONG><a name="[102]"></a>cJSON_Delete</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, cjson.o(i.cJSON_Delete))
+<BR><BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateString
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_Delete
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddStringToObject
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddNumberToObject
+</UL>
+
+<P><STRONG><a name="[101]"></a>cJSON_PrintUnformatted</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cjson.o(i.cJSON_PrintUnformatted))
+<BR><BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
+</UL>
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 </UL>
 
 <P><STRONG><a name="[40]"></a>fputc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, usart.o(i.fputc))
@@ -1524,46 +1514,46 @@ Global Symbols
 <LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[10e]"></a>int_DS3553_getStep</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, int_ds3553.o(i.int_DS3553_getStep))
+<P><STRONG><a name="[10d]"></a>int_DS3553_getStep</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, int_ds3553.o(i.int_DS3553_getStep))
 <BR><BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Step
+<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Step
 </UL>
 
 <P><STRONG><a name="[fa]"></a>int_GPS_Init</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, int_gps.o(i.int_GPS_Init))
 <BR><BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_ReceiveToIdle_IT
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_WriteCmd
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_WriteCmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_init
 </UL>
 
-<P><STRONG><a name="[111]"></a>int_GPS_ReadData</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, int_gps.o(i.int_GPS_ReadData))
-<BR><BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<P><STRONG><a name="[110]"></a>int_GPS_ReadData</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, int_gps.o(i.int_GPS_ReadData))
+<BR><BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
 </UL>
 
-<P><STRONG><a name="[110]"></a>int_GPS_WriteCmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, int_gps.o(i.int_GPS_WriteCmd))
+<P><STRONG><a name="[10f]"></a>int_GPS_WriteCmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, int_gps.o(i.int_GPS_WriteCmd))
 <BR><BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_Init
 </UL>
 
-<P><STRONG><a name="[112]"></a>int_LoRa_init</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, int_lora.o(i.int_LoRa_init))
+<P><STRONG><a name="[111]"></a>int_LoRa_init</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, int_lora.o(i.int_LoRa_init))
 <BR><BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ebyte_E220x_SetLoraSyncWord
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[105]"></a>int_LoRa_send_data</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, int_lora.o(i.int_LoRa_send_data))
-<BR><BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<P><STRONG><a name="[104]"></a>int_LoRa_send_data</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, int_lora.o(i.int_LoRa_send_data))
+<BR><BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 </UL>
 
 <P><STRONG><a name="[c9]"></a>int_gps_Rx_Callback</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, int_gps.o(i.int_gps_Rx_Callback))
@@ -1572,18 +1562,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_RxEventCallback
 </UL>
 
-<P><STRONG><a name="[fb]"></a>int_qs100_init</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, int_qs100.o(i.int_qs100_init))
-<BR><BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_ReceiveToIdle_IT
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs_sendCmd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_init
-</UL>
-
 <P><STRONG><a name="[38]"></a>main</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_LoRa_init
+<BR><BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_LoRa_init
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_Reg_Init
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_init
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART3_UART_Init
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
@@ -1744,18 +1726,6 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 
-<P><STRONG><a name="[113]"></a>int_qs_sendCmd</STRONG> (Thumb, 308 bytes, Stack size 0 bytes, int_qs100.o(i.int_qs_sendCmd))
-<BR><BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strrchr
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_qs100_init
-</UL>
-
 <P><STRONG><a name="[e2]"></a>NMEA_To_Decimal</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, app_communication.o(i.NMEA_To_Decimal))
 <BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
@@ -1767,27 +1737,27 @@ Local Symbols
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps_data
 </UL>
 
-<P><STRONG><a name="[fe]"></a>get_Step</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, app_communication.o(i.get_Step))
-<BR><BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_getStep
+<P><STRONG><a name="[fd]"></a>get_Step</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, app_communication.o(i.get_Step))
+<BR><BR>[Calls]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_DS3553_getStep
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 </UL>
 
-<P><STRONG><a name="[fd]"></a>parse_gps_data</STRONG> (Thumb, 552 bytes, Stack size 0 bytes, app_communication.o(i.parse_gps_data))
+<P><STRONG><a name="[fc]"></a>parse_gps_data</STRONG> (Thumb, 552 bytes, Stack size 0 bytes, app_communication.o(i.parse_gps_data))
 <BR><BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strrchr
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMEA_To_Decimal
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_ReadData
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_GPS_ReadData
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sscanf
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_communication_send
 </UL>
 
 <P><STRONG><a name="[f3]"></a>add_item_to_array</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, cjson.o(i.add_item_to_array))
@@ -1801,23 +1771,23 @@ Local Symbols
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_strdup
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_item_to_array
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddStringToObject
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddNumberToObject
+<BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddStringToObject
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_AddNumberToObject
 </UL>
 
-<P><STRONG><a name="[108]"></a>cJSON_New_Item</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, cjson.o(i.cJSON_New_Item))
+<P><STRONG><a name="[107]"></a>cJSON_New_Item</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, cjson.o(i.cJSON_New_Item))
 <BR><BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateString
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateObject
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateString
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateNumber
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateObject
 </UL>
 
 <P><STRONG><a name="[f7]"></a>cJSON_strdup</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, cjson.o(i.cJSON_strdup))
-<BR><BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR><BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateString
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_CreateString
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_item_to_object
 </UL>
 
@@ -1825,109 +1795,109 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_item_to_object
 </UL>
 
-<P><STRONG><a name="[10c]"></a>compare_double</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, cjson.o(i.compare_double))
+<P><STRONG><a name="[10b]"></a>compare_double</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, cjson.o(i.compare_double))
 <BR><BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmple
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmple
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
 </UL>
 
-<P><STRONG><a name="[10d]"></a>ensure</STRONG> (Thumb, 184 bytes, Stack size 0 bytes, cjson.o(i.ensure))
-<BR><BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<P><STRONG><a name="[10c]"></a>ensure</STRONG> (Thumb, 184 bytes, Stack size 0 bytes, cjson.o(i.ensure))
+<BR><BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_array
-</UL>
-
-<P><STRONG><a name="[11a]"></a>get_decimal_point</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, cjson.o(i.get_decimal_point))
-<BR><BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_array
 </UL>
 
-<P><STRONG><a name="[10a]"></a>print</STRONG> (Thumb, 188 bytes, Stack size 0 bytes, cjson.o(i.print))
+<P><STRONG><a name="[118]"></a>get_decimal_point</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, cjson.o(i.get_decimal_point))
+<BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+</UL>
+
+<P><STRONG><a name="[109]"></a>print</STRONG> (Thumb, 188 bytes, Stack size 0 bytes, cjson.o(i.print))
 <BR><BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_offset
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_offset
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_PrintUnformatted
-</UL>
-
-<P><STRONG><a name="[118]"></a>print_array</STRONG> (Thumb, 178 bytes, Stack size 0 bytes, cjson.o(i.print_array))
-<BR><BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_offset
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
-</UL>
-<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cJSON_PrintUnformatted
 </UL>
 
-<P><STRONG><a name="[119]"></a>print_number</STRONG> (Thumb, 304 bytes, Stack size 0 bytes, cjson.o(i.print_number))
+<P><STRONG><a name="[116]"></a>print_array</STRONG> (Thumb, 178 bytes, Stack size 0 bytes, cjson.o(i.print_array))
+<BR><BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_offset
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
+</UL>
+<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+</UL>
+
+<P><STRONG><a name="[117]"></a>print_number</STRONG> (Thumb, 304 bytes, Stack size 0 bytes, cjson.o(i.print_number))
 <BR><BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmpeq
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_decimal_point
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmpeq
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_decimal_point
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_double
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sscanf
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
-</UL>
-
-<P><STRONG><a name="[11c]"></a>print_object</STRONG> (Thumb, 372 bytes, Stack size 0 bytes, cjson.o(i.print_object))
-<BR><BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_offset
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
-</UL>
-<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
 </UL>
 
-<P><STRONG><a name="[11e]"></a>print_string</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cjson.o(i.print_string))
-<BR><BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
+<P><STRONG><a name="[11a]"></a>print_object</STRONG> (Thumb, 372 bytes, Stack size 0 bytes, cjson.o(i.print_object))
+<BR><BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_offset
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
 </UL>
-<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
-</UL>
-
-<P><STRONG><a name="[11d]"></a>print_string_ptr</STRONG> (Thumb, 360 bytes, Stack size 0 bytes, cjson.o(i.print_string_ptr))
-<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
+<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
 </UL>
 
-<P><STRONG><a name="[116]"></a>print_value</STRONG> (Thumb, 236 bytes, Stack size 0 bytes, cjson.o(i.print_value))
-<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_array
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
+<P><STRONG><a name="[11c]"></a>print_string</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cjson.o(i.print_string))
+<BR><BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string_ptr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_array
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
+<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_value
+</UL>
+
+<P><STRONG><a name="[11b]"></a>print_string_ptr</STRONG> (Thumb, 360 bytes, Stack size 0 bytes, cjson.o(i.print_string_ptr))
+<BR><BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
+</UL>
+
+<P><STRONG><a name="[114]"></a>print_value</STRONG> (Thumb, 236 bytes, Stack size 0 bytes, cjson.o(i.print_value))
+<BR><BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_string
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_number
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_array
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ensure
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_array
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
 </UL>
 
 <P><STRONG><a name="[f4]"></a>suffix_object</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cjson.o(i.suffix_object))
 <BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_item_to_array
 </UL>
 
-<P><STRONG><a name="[117]"></a>update_offset</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, cjson.o(i.update_offset))
-<BR><BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<P><STRONG><a name="[115]"></a>update_offset</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, cjson.o(i.update_offset))
+<BR><BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_array
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_object
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_array
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
 </UL>
 
 <P><STRONG><a name="[ee]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 0 bytes, printfa.o(i._fp_digits), UNUSED)
@@ -1966,7 +1936,7 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0sprintf)
 </UL>
 <P><STRONG><a name="[ed]"></a>internal_alloc</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, mallocr.o(i.internal_alloc))
-<BR><BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR><BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;realloc
 <LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc

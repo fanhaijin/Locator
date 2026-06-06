@@ -6,7 +6,7 @@ void app_communication_init(void)
 {
     int_DS3553_Reg_Init();
     int_GPS_Init();
-    int_qs100_init();
+    // int_qs100_init();
 }
 static double NMEA_To_Decimal(double *number)
 {

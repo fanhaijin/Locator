@@ -3,20 +3,20 @@
         {
             "name": "Locator",
             "includePath": [
-                "d:\\Code\\Project_Example\\Locator\\Core\\Inc",
-                "d:\\Code\\Project_Example\\Locator\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "d:\\Code\\Project_Example\\Locator\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "d:\\Code\\Project_Example\\Locator\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "d:\\Code\\Project_Example\\Locator\\Drivers\\CMSIS\\Include",
-                "d:\\Code\\Project_Example\\Locator\\common",
-                "d:\\Code\\Project_Example\\Locator\\interface",
-                "d:\\Code\\Project_Example\\Locator\\application",
-                "d:\\Code\\Project_Example\\Locator\\middleware\\cJSON",
-                "d:\\Code\\Project_Example\\Locator\\middleware\\E200",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\Core\\Inc",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\Drivers\\CMSIS\\Include",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\common",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\interface",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\application",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\middleware\\cJSON",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\middleware\\E200",
                 "D:\\software\\Keil_v5\\ARM\\ARMCC\\include",
-                "d:\\Code\\Project_Example\\Locator\\MDK-ARM",
-                "d:\\Code\\Project_Example\\Locator\\Core\\Src",
-                "d:\\Code\\Project_Example\\Locator\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\MDK-ARM",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\Core\\Src",
+                "c:\\Users\\Fanhj\\Desktop\\test\\Locator\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

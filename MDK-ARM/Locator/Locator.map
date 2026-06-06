@@ -687,7 +687,6 @@ Section Cross References
     app_communication.o(i.NMEA_To_Decimal) refers to fdiv.o(.text) for __aeabi_fdiv
     app_communication.o(i.app_communication_init) refers to int_ds3553.o(i.int_DS3553_Reg_Init) for int_DS3553_Reg_Init
     app_communication.o(i.app_communication_init) refers to int_gps.o(i.int_GPS_Init) for int_GPS_Init
-    app_communication.o(i.app_communication_init) refers to int_qs100.o(i.int_qs100_init) for int_qs100_init
     app_communication.o(i.app_communication_send) refers to app_communication.o(i.parse_gps_data) for parse_gps_data
     app_communication.o(i.app_communication_send) refers to app_communication.o(i.get_Step) for get_Step
     app_communication.o(i.app_communication_send) refers to cjson.o(i.cJSON_CreateObject) for cJSON_CreateObject
@@ -1923,8 +1922,10 @@ Removing Unused input sections from the image.
     Removing int_qs100.o(i.int_qs100_createTcp), (288 bytes).
     Removing int_qs100.o(i.int_qs100_endSocket), (72 bytes).
     Removing int_qs100.o(i.int_qs100_getNetwork), (256 bytes).
+    Removing int_qs100.o(i.int_qs100_init), (60 bytes).
     Removing int_qs100.o(i.int_qs100_sendTcp), (236 bytes).
     Removing int_qs100.o(i.int_qs100_send_server), (1336 bytes).
+    Removing int_qs100.o(i.int_qs_sendCmd), (404 bytes).
     Removing int_lora.o(.rev16_text), (4 bytes).
     Removing int_lora.o(.revsh_text), (4 bytes).
     Removing int_lora.o(.rrx_text), (6 bytes).
@@ -2059,7 +2060,7 @@ Removing Unused input sections from the image.
     Removing ebyte_core.o(.revsh_text), (4 bytes).
     Removing ebyte_core.o(.rrx_text), (6 bytes).
 
-555 unused section(s) (total 47835 bytes) removed from the image.
+557 unused section(s) (total 48299 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2095,49 +2096,49 @@ Image Symbol Table
     ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c 0x00000000   Number         0  stm32f1xx_hal_spi.o ABSOLUTE
     ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c 0x00000000   Number         0  stm32f1xx_hal_uart.o ABSOLUTE
     ../clib/../cmprslib/zerorunl.c           0x00000000   Number         0  __dczerorl.o ABSOLUTE
-    ../clib/microlib/ctype/ctype.c           0x00000000   Number         0  ctype_c.o ABSOLUTE
     ../clib/microlib/ctype/ctype.c           0x00000000   Number         0  isspace_c.o ABSOLUTE
+    ../clib/microlib/ctype/ctype.c           0x00000000   Number         0  ctype_c.o ABSOLUTE
     ../clib/microlib/ctype/tolower.c         0x00000000   Number         0  tolower.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/string/strcmp.c         0x00000000   Number         0  strcmp.o ABSOLUTE
     ../clib/microlib/string/strcpy.c         0x00000000   Number         0  strcpy.o ABSOLUTE
@@ -2146,24 +2147,24 @@ Image Symbol Table
     ../clib/microlib/string/strrchr.c        0x00000000   Number         0  strrchr.o ABSOLUTE
     ../clib/microlib/string/strstr.c         0x00000000   Number         0  strstr.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  _scanf_str.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  _scanf_int.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  _chval.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  __0sscanf.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  scanf_char.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  scanf_fp.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  _sgetc.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  _scanf.o ABSOLUTE
     ../clib/scanf.c                          0x00000000   Number         0  strtod.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  scanf_fp.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _chval.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _sgetc.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf_str.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  scanf_char.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf_int.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  __0sscanf.o ABSOLUTE
     ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
     ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
-    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  fdiv.o ABSOLUTE
-    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
-    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltul.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
@@ -2263,8 +2264,8 @@ Image Symbol Table
     .text                                    0x08000c08   Section        0  scanf_char.o(.text)
     _scanf_char_input                        0x08000c09   Thumb Code    12  scanf_char.o(.text)
     .text                                    0x08000c30   Section        0  _sgetc.o(.text)
-    .text                                    0x08000c70   Section        0  fepilogue.o(.text)
     .text                                    0x08000c70   Section        0  iusefp.o(.text)
+    .text                                    0x08000c70   Section        0  fepilogue.o(.text)
     .text                                    0x08000cde   Section        0  depilogue.o(.text)
     .text                                    0x08000d98   Section        0  dfltul.o(.text)
     .text                                    0x08000db0   Section        0  dfixul.o(.text)
@@ -2460,77 +2461,74 @@ Image Symbol Table
     i.add_item_to_object                     0x0800594a   Section        0  cjson.o(i.add_item_to_object)
     add_item_to_object                       0x0800594b   Thumb Code   122  cjson.o(i.add_item_to_object)
     i.app_communication_init                 0x080059c4   Section        0  app_communication.o(i.app_communication_init)
-    i.app_communication_send                 0x080059d4   Section        0  app_communication.o(i.app_communication_send)
-    i.cJSON_AddNumberToObject                0x08005bd4   Section        0  cjson.o(i.cJSON_AddNumberToObject)
-    i.cJSON_AddStringToObject                0x08005c10   Section        0  cjson.o(i.cJSON_AddStringToObject)
-    i.cJSON_CreateNumber                     0x08005c44   Section        0  cjson.o(i.cJSON_CreateNumber)
-    i.cJSON_CreateObject                     0x08005ca8   Section        0  cjson.o(i.cJSON_CreateObject)
-    i.cJSON_CreateString                     0x08005cc0   Section        0  cjson.o(i.cJSON_CreateString)
-    i.cJSON_Delete                           0x08005cf4   Section        0  cjson.o(i.cJSON_Delete)
-    i.cJSON_New_Item                         0x08005d54   Section        0  cjson.o(i.cJSON_New_Item)
-    cJSON_New_Item                           0x08005d55   Thumb Code    26  cjson.o(i.cJSON_New_Item)
-    i.cJSON_PrintUnformatted                 0x08005d70   Section        0  cjson.o(i.cJSON_PrintUnformatted)
-    i.cJSON_strdup                           0x08005d84   Section        0  cjson.o(i.cJSON_strdup)
-    cJSON_strdup                             0x08005d85   Thumb Code    56  cjson.o(i.cJSON_strdup)
-    i.cast_away_const                        0x08005dbc   Section        0  cjson.o(i.cast_away_const)
-    cast_away_const                          0x08005dbd   Thumb Code     2  cjson.o(i.cast_away_const)
-    i.compare_double                         0x08005dc0   Section        0  cjson.o(i.compare_double)
-    compare_double                           0x08005dc1   Thumb Code   112  cjson.o(i.compare_double)
-    i.ensure                                 0x08005e34   Section        0  cjson.o(i.ensure)
-    ensure                                   0x08005e35   Thumb Code   184  cjson.o(i.ensure)
-    i.fputc                                  0x08005eec   Section        0  usart.o(i.fputc)
-    i.get_Step                               0x08005f08   Section        0  app_communication.o(i.get_Step)
-    get_Step                                 0x08005f09   Thumb Code    12  app_communication.o(i.get_Step)
-    i.get_decimal_point                      0x08005f18   Section        0  cjson.o(i.get_decimal_point)
-    get_decimal_point                        0x08005f19   Thumb Code     4  cjson.o(i.get_decimal_point)
-    i.int_DS3553_Reg_Init                    0x08005f1c   Section        0  int_ds3553.o(i.int_DS3553_Reg_Init)
-    i.int_DS3553_getStep                     0x08005f68   Section        0  int_ds3553.o(i.int_DS3553_getStep)
-    i.int_GPS_Init                           0x08006008   Section        0  int_gps.o(i.int_GPS_Init)
-    i.int_GPS_ReadData                       0x0800608c   Section        0  int_gps.o(i.int_GPS_ReadData)
-    i.int_GPS_WriteCmd                       0x080060dc   Section        0  int_gps.o(i.int_GPS_WriteCmd)
-    i.int_LoRa_init                          0x080060f8   Section        0  int_lora.o(i.int_LoRa_init)
-    i.int_LoRa_send_data                     0x0800610c   Section        0  int_lora.o(i.int_LoRa_send_data)
-    i.int_gps_Rx_Callback                    0x08006124   Section        0  int_gps.o(i.int_gps_Rx_Callback)
-    i.int_qs100_init                         0x08006150   Section        0  int_qs100.o(i.int_qs100_init)
-    i.int_qs_sendCmd                         0x0800618c   Section        0  int_qs100.o(i.int_qs_sendCmd)
-    int_qs_sendCmd                           0x0800618d   Thumb Code   308  int_qs100.o(i.int_qs_sendCmd)
-    i.internal_alloc                         0x08006320   Section        0  mallocr.o(i.internal_alloc)
-    internal_alloc                           0x08006321   Thumb Code    76  mallocr.o(i.internal_alloc)
-    i.main                                   0x08006370   Section        0  main.o(i.main)
-    i.parse_gps_data                         0x080063b8   Section        0  app_communication.o(i.parse_gps_data)
-    parse_gps_data                           0x080063b9   Thumb Code   552  app_communication.o(i.parse_gps_data)
-    i.print                                  0x080066c4   Section        0  cjson.o(i.print)
-    print                                    0x080066c5   Thumb Code   188  cjson.o(i.print)
-    i.print_array                            0x08006780   Section        0  cjson.o(i.print_array)
-    print_array                              0x08006781   Thumb Code   178  cjson.o(i.print_array)
-    i.print_number                           0x08006834   Section        0  cjson.o(i.print_number)
-    print_number                             0x08006835   Thumb Code   304  cjson.o(i.print_number)
-    i.print_object                           0x08006988   Section        0  cjson.o(i.print_object)
-    print_object                             0x08006989   Thumb Code   372  cjson.o(i.print_object)
-    i.print_string                           0x08006afc   Section        0  cjson.o(i.print_string)
-    print_string                             0x08006afd   Thumb Code    16  cjson.o(i.print_string)
-    i.print_string_ptr                       0x08006b0c   Section        0  cjson.o(i.print_string_ptr)
-    print_string_ptr                         0x08006b0d   Thumb Code   360  cjson.o(i.print_string_ptr)
-    i.print_value                            0x08006c80   Section        0  cjson.o(i.print_value)
-    print_value                              0x08006c81   Thumb Code   236  cjson.o(i.print_value)
-    i.realloc                                0x08006d84   Section        0  mallocr.o(i.realloc)
-    i.suffix_object                          0x08006df0   Section        0  cjson.o(i.suffix_object)
-    suffix_object                            0x08006df1   Thumb Code     6  cjson.o(i.suffix_object)
-    i.update_offset                          0x08006df6   Section        0  cjson.o(i.update_offset)
-    update_offset                            0x08006df7   Thumb Code    36  cjson.o(i.update_offset)
-    .constdata                               0x08006e1a   Section       18  stm32f1xx_hal_rcc.o(.constdata)
-    aPLLMULFactorTable                       0x08006e1a   Data          16  stm32f1xx_hal_rcc.o(.constdata)
-    aPredivFactorTable                       0x08006e2a   Data           2  stm32f1xx_hal_rcc.o(.constdata)
-    .constdata                               0x08006e2c   Section       18  stm32f1xx_hal_rcc_ex.o(.constdata)
-    aPLLMULFactorTable                       0x08006e2c   Data          16  stm32f1xx_hal_rcc_ex.o(.constdata)
-    aPredivFactorTable                       0x08006e3c   Data           2  stm32f1xx_hal_rcc_ex.o(.constdata)
-    .constdata                               0x08006e3e   Section       24  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08006e58   Section      200  ebyte_e220x.o(.constdata)
-    Ebyte_E220x_LoraBpsTable                 0x08006e58   Data          24  ebyte_e220x.o(.constdata)
-    .constdata                               0x08006f20   Section       32  ebyte_core.o(.constdata)
-    .constdata                               0x08006f40   Section       64  ctype_c.o(.constdata)
-    .conststring                             0x08006f80   Section       13  main.o(.conststring)
-    .conststring                             0x08006f90   Section       75  app_communication.o(.conststring)
+    i.app_communication_send                 0x080059d0   Section        0  app_communication.o(i.app_communication_send)
+    i.cJSON_AddNumberToObject                0x08005bd0   Section        0  cjson.o(i.cJSON_AddNumberToObject)
+    i.cJSON_AddStringToObject                0x08005c0c   Section        0  cjson.o(i.cJSON_AddStringToObject)
+    i.cJSON_CreateNumber                     0x08005c40   Section        0  cjson.o(i.cJSON_CreateNumber)
+    i.cJSON_CreateObject                     0x08005ca4   Section        0  cjson.o(i.cJSON_CreateObject)
+    i.cJSON_CreateString                     0x08005cbc   Section        0  cjson.o(i.cJSON_CreateString)
+    i.cJSON_Delete                           0x08005cf0   Section        0  cjson.o(i.cJSON_Delete)
+    i.cJSON_New_Item                         0x08005d50   Section        0  cjson.o(i.cJSON_New_Item)
+    cJSON_New_Item                           0x08005d51   Thumb Code    26  cjson.o(i.cJSON_New_Item)
+    i.cJSON_PrintUnformatted                 0x08005d6c   Section        0  cjson.o(i.cJSON_PrintUnformatted)
+    i.cJSON_strdup                           0x08005d80   Section        0  cjson.o(i.cJSON_strdup)
+    cJSON_strdup                             0x08005d81   Thumb Code    56  cjson.o(i.cJSON_strdup)
+    i.cast_away_const                        0x08005db8   Section        0  cjson.o(i.cast_away_const)
+    cast_away_const                          0x08005db9   Thumb Code     2  cjson.o(i.cast_away_const)
+    i.compare_double                         0x08005dbc   Section        0  cjson.o(i.compare_double)
+    compare_double                           0x08005dbd   Thumb Code   112  cjson.o(i.compare_double)
+    i.ensure                                 0x08005e30   Section        0  cjson.o(i.ensure)
+    ensure                                   0x08005e31   Thumb Code   184  cjson.o(i.ensure)
+    i.fputc                                  0x08005ee8   Section        0  usart.o(i.fputc)
+    i.get_Step                               0x08005f04   Section        0  app_communication.o(i.get_Step)
+    get_Step                                 0x08005f05   Thumb Code    12  app_communication.o(i.get_Step)
+    i.get_decimal_point                      0x08005f14   Section        0  cjson.o(i.get_decimal_point)
+    get_decimal_point                        0x08005f15   Thumb Code     4  cjson.o(i.get_decimal_point)
+    i.int_DS3553_Reg_Init                    0x08005f18   Section        0  int_ds3553.o(i.int_DS3553_Reg_Init)
+    i.int_DS3553_getStep                     0x08005f64   Section        0  int_ds3553.o(i.int_DS3553_getStep)
+    i.int_GPS_Init                           0x08006004   Section        0  int_gps.o(i.int_GPS_Init)
+    i.int_GPS_ReadData                       0x08006088   Section        0  int_gps.o(i.int_GPS_ReadData)
+    i.int_GPS_WriteCmd                       0x080060d8   Section        0  int_gps.o(i.int_GPS_WriteCmd)
+    i.int_LoRa_init                          0x080060f4   Section        0  int_lora.o(i.int_LoRa_init)
+    i.int_LoRa_send_data                     0x08006108   Section        0  int_lora.o(i.int_LoRa_send_data)
+    i.int_gps_Rx_Callback                    0x08006120   Section        0  int_gps.o(i.int_gps_Rx_Callback)
+    i.internal_alloc                         0x0800614c   Section        0  mallocr.o(i.internal_alloc)
+    internal_alloc                           0x0800614d   Thumb Code    76  mallocr.o(i.internal_alloc)
+    i.main                                   0x0800619c   Section        0  main.o(i.main)
+    i.parse_gps_data                         0x080061e4   Section        0  app_communication.o(i.parse_gps_data)
+    parse_gps_data                           0x080061e5   Thumb Code   552  app_communication.o(i.parse_gps_data)
+    i.print                                  0x080064f0   Section        0  cjson.o(i.print)
+    print                                    0x080064f1   Thumb Code   188  cjson.o(i.print)
+    i.print_array                            0x080065ac   Section        0  cjson.o(i.print_array)
+    print_array                              0x080065ad   Thumb Code   178  cjson.o(i.print_array)
+    i.print_number                           0x08006660   Section        0  cjson.o(i.print_number)
+    print_number                             0x08006661   Thumb Code   304  cjson.o(i.print_number)
+    i.print_object                           0x080067b4   Section        0  cjson.o(i.print_object)
+    print_object                             0x080067b5   Thumb Code   372  cjson.o(i.print_object)
+    i.print_string                           0x08006928   Section        0  cjson.o(i.print_string)
+    print_string                             0x08006929   Thumb Code    16  cjson.o(i.print_string)
+    i.print_string_ptr                       0x08006938   Section        0  cjson.o(i.print_string_ptr)
+    print_string_ptr                         0x08006939   Thumb Code   360  cjson.o(i.print_string_ptr)
+    i.print_value                            0x08006aac   Section        0  cjson.o(i.print_value)
+    print_value                              0x08006aad   Thumb Code   236  cjson.o(i.print_value)
+    i.realloc                                0x08006bb0   Section        0  mallocr.o(i.realloc)
+    i.suffix_object                          0x08006c1c   Section        0  cjson.o(i.suffix_object)
+    suffix_object                            0x08006c1d   Thumb Code     6  cjson.o(i.suffix_object)
+    i.update_offset                          0x08006c22   Section        0  cjson.o(i.update_offset)
+    update_offset                            0x08006c23   Thumb Code    36  cjson.o(i.update_offset)
+    .constdata                               0x08006c46   Section       18  stm32f1xx_hal_rcc.o(.constdata)
+    aPLLMULFactorTable                       0x08006c46   Data          16  stm32f1xx_hal_rcc.o(.constdata)
+    aPredivFactorTable                       0x08006c56   Data           2  stm32f1xx_hal_rcc.o(.constdata)
+    .constdata                               0x08006c58   Section       18  stm32f1xx_hal_rcc_ex.o(.constdata)
+    aPLLMULFactorTable                       0x08006c58   Data          16  stm32f1xx_hal_rcc_ex.o(.constdata)
+    aPredivFactorTable                       0x08006c68   Data           2  stm32f1xx_hal_rcc_ex.o(.constdata)
+    .constdata                               0x08006c6a   Section       24  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08006c84   Section      200  ebyte_e220x.o(.constdata)
+    Ebyte_E220x_LoraBpsTable                 0x08006c84   Data          24  ebyte_e220x.o(.constdata)
+    .constdata                               0x08006d4c   Section       32  ebyte_core.o(.constdata)
+    .constdata                               0x08006d6c   Section       64  ctype_c.o(.constdata)
+    .conststring                             0x08006dac   Section       13  main.o(.conststring)
+    .conststring                             0x08006dbc   Section       75  app_communication.o(.conststring)
     .data                                    0x20000000   Section     1034  main.o(.data)
     .data                                    0x2000040c   Section        9  stm32f1xx_hal.o(.data)
     .data                                    0x20000418   Section        4  system_stm32f1xx.o(.data)
@@ -2869,34 +2867,33 @@ Image Symbol Table
     __scatterload_null                       0x0800505f   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x08005061   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     _is_digit                                0x080051f5   Thumb Code    14  scanf_fp.o(i._is_digit)
-    app_communication_init                   0x080059c5   Thumb Code    16  app_communication.o(i.app_communication_init)
-    app_communication_send                   0x080059d5   Thumb Code   374  app_communication.o(i.app_communication_send)
-    cJSON_AddNumberToObject                  0x08005bd5   Thumb Code    56  cjson.o(i.cJSON_AddNumberToObject)
-    cJSON_AddStringToObject                  0x08005c11   Thumb Code    48  cjson.o(i.cJSON_AddStringToObject)
-    cJSON_CreateNumber                       0x08005c45   Thumb Code    82  cjson.o(i.cJSON_CreateNumber)
-    cJSON_CreateObject                       0x08005ca9   Thumb Code    20  cjson.o(i.cJSON_CreateObject)
-    cJSON_CreateString                       0x08005cc1   Thumb Code    46  cjson.o(i.cJSON_CreateString)
-    cJSON_Delete                             0x08005cf5   Thumb Code    92  cjson.o(i.cJSON_Delete)
-    cJSON_PrintUnformatted                   0x08005d71   Thumb Code    16  cjson.o(i.cJSON_PrintUnformatted)
-    fputc                                    0x08005eed   Thumb Code    22  usart.o(i.fputc)
-    int_DS3553_Reg_Init                      0x08005f1d   Thumb Code    66  int_ds3553.o(i.int_DS3553_Reg_Init)
-    int_DS3553_getStep                       0x08005f69   Thumb Code   140  int_ds3553.o(i.int_DS3553_getStep)
-    int_GPS_Init                             0x08006009   Thumb Code    82  int_gps.o(i.int_GPS_Init)
-    int_GPS_ReadData                         0x0800608d   Thumb Code    72  int_gps.o(i.int_GPS_ReadData)
-    int_GPS_WriteCmd                         0x080060dd   Thumb Code    22  int_gps.o(i.int_GPS_WriteCmd)
-    int_LoRa_init                            0x080060f9   Thumb Code    16  int_lora.o(i.int_LoRa_init)
-    int_LoRa_send_data                       0x0800610d   Thumb Code    20  int_lora.o(i.int_LoRa_send_data)
-    int_gps_Rx_Callback                      0x08006125   Thumb Code    30  int_gps.o(i.int_gps_Rx_Callback)
-    int_qs100_init                           0x08006151   Thumb Code    38  int_qs100.o(i.int_qs100_init)
-    main                                     0x08006371   Thumb Code    64  main.o(i.main)
-    realloc                                  0x08006d85   Thumb Code   102  mallocr.o(i.realloc)
-    AHBPrescTable                            0x08006e3e   Data          16  system_stm32f1xx.o(.constdata)
-    APBPrescTable                            0x08006e4e   Data           8  system_stm32f1xx.o(.constdata)
-    FskBandwidths                            0x08006e70   Data         176  ebyte_e220x.o(.constdata)
-    Ebyte_RF                                 0x08006f20   Data          32  ebyte_core.o(.constdata)
-    __ctype_categories                       0x08006f40   Data          64  ctype_c.o(.constdata)
-    Region$$Table$$Base                      0x08006fdc   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08006ffc   Number         0  anon$$obj.o(Region$$Table)
+    app_communication_init                   0x080059c5   Thumb Code    12  app_communication.o(i.app_communication_init)
+    app_communication_send                   0x080059d1   Thumb Code   374  app_communication.o(i.app_communication_send)
+    cJSON_AddNumberToObject                  0x08005bd1   Thumb Code    56  cjson.o(i.cJSON_AddNumberToObject)
+    cJSON_AddStringToObject                  0x08005c0d   Thumb Code    48  cjson.o(i.cJSON_AddStringToObject)
+    cJSON_CreateNumber                       0x08005c41   Thumb Code    82  cjson.o(i.cJSON_CreateNumber)
+    cJSON_CreateObject                       0x08005ca5   Thumb Code    20  cjson.o(i.cJSON_CreateObject)
+    cJSON_CreateString                       0x08005cbd   Thumb Code    46  cjson.o(i.cJSON_CreateString)
+    cJSON_Delete                             0x08005cf1   Thumb Code    92  cjson.o(i.cJSON_Delete)
+    cJSON_PrintUnformatted                   0x08005d6d   Thumb Code    16  cjson.o(i.cJSON_PrintUnformatted)
+    fputc                                    0x08005ee9   Thumb Code    22  usart.o(i.fputc)
+    int_DS3553_Reg_Init                      0x08005f19   Thumb Code    66  int_ds3553.o(i.int_DS3553_Reg_Init)
+    int_DS3553_getStep                       0x08005f65   Thumb Code   140  int_ds3553.o(i.int_DS3553_getStep)
+    int_GPS_Init                             0x08006005   Thumb Code    82  int_gps.o(i.int_GPS_Init)
+    int_GPS_ReadData                         0x08006089   Thumb Code    72  int_gps.o(i.int_GPS_ReadData)
+    int_GPS_WriteCmd                         0x080060d9   Thumb Code    22  int_gps.o(i.int_GPS_WriteCmd)
+    int_LoRa_init                            0x080060f5   Thumb Code    16  int_lora.o(i.int_LoRa_init)
+    int_LoRa_send_data                       0x08006109   Thumb Code    20  int_lora.o(i.int_LoRa_send_data)
+    int_gps_Rx_Callback                      0x08006121   Thumb Code    30  int_gps.o(i.int_gps_Rx_Callback)
+    main                                     0x0800619d   Thumb Code    64  main.o(i.main)
+    realloc                                  0x08006bb1   Thumb Code   102  mallocr.o(i.realloc)
+    AHBPrescTable                            0x08006c6a   Data          16  system_stm32f1xx.o(.constdata)
+    APBPrescTable                            0x08006c7a   Data           8  system_stm32f1xx.o(.constdata)
+    FskBandwidths                            0x08006c9c   Data         176  ebyte_e220x.o(.constdata)
+    Ebyte_RF                                 0x08006d4c   Data          32  ebyte_core.o(.constdata)
+    __ctype_categories                       0x08006d6c   Data          64  ctype_c.o(.constdata)
+    Region$$Table$$Base                      0x08006e08   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08006e28   Number         0  anon$$obj.o(Region$$Table)
     GPS_Data_Size                            0x20000000   Data           2  main.o(.data)
     ip                                       0x20000004   Data           4  main.o(.data)
     port                                     0x20000008   Data           2  main.o(.data)
@@ -2932,9 +2929,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007450, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x00007034])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000727c, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x00006e60])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00006ffc, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00006e28, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3157,64 +3154,62 @@ Memory Map of the image
     0x0800590a   0x0800590a   0x0000000a   Code   RO          910    i._sputc            mc_w.l(printfa.o)
     0x08005914   0x08005914   0x00000036   Code   RO          557    i.add_item_to_array  cjson.o
     0x0800594a   0x0800594a   0x0000007a   Code   RO          558    i.add_item_to_object  cjson.o
-    0x080059c4   0x080059c4   0x00000010   Code   RO          550    i.app_communication_init  app_communication.o
-    0x080059d4   0x080059d4   0x00000200   Code   RO          551    i.app_communication_send  app_communication.o
-    0x08005bd4   0x08005bd4   0x0000003c   Code   RO          569    i.cJSON_AddNumberToObject  cjson.o
-    0x08005c10   0x08005c10   0x00000034   Code   RO          572    i.cJSON_AddStringToObject  cjson.o
-    0x08005c44   0x08005c44   0x00000064   Code   RO          583    i.cJSON_CreateNumber  cjson.o
-    0x08005ca8   0x08005ca8   0x00000018   Code   RO          584    i.cJSON_CreateObject  cjson.o
-    0x08005cc0   0x08005cc0   0x00000034   Code   RO          587    i.cJSON_CreateString  cjson.o
-    0x08005cf4   0x08005cf4   0x00000060   Code   RO          591    i.cJSON_Delete      cjson.o
-    0x08005d54   0x08005d54   0x0000001a   Code   RO          621    i.cJSON_New_Item    cjson.o
-    0x08005d6e   0x08005d6e   0x00000002   PAD
-    0x08005d70   0x08005d70   0x00000014   Code   RO          629    i.cJSON_PrintUnformatted  cjson.o
-    0x08005d84   0x08005d84   0x00000038   Code   RO          639    i.cJSON_strdup      cjson.o
-    0x08005dbc   0x08005dbc   0x00000002   Code   RO          641    i.cast_away_const   cjson.o
-    0x08005dbe   0x08005dbe   0x00000002   PAD
-    0x08005dc0   0x08005dc0   0x00000074   Code   RO          642    i.compare_double    cjson.o
-    0x08005e34   0x08005e34   0x000000b8   Code   RO          644    i.ensure            cjson.o
-    0x08005eec   0x08005eec   0x0000001c   Code   RO           47    i.fputc             usart.o
-    0x08005f08   0x08005f08   0x00000010   Code   RO          552    i.get_Step          app_communication.o
-    0x08005f18   0x08005f18   0x00000004   Code   RO          646    i.get_decimal_point  cjson.o
-    0x08005f1c   0x08005f1c   0x0000004c   Code   RO          515    i.int_DS3553_Reg_Init  int_ds3553.o
-    0x08005f68   0x08005f68   0x000000a0   Code   RO          516    i.int_DS3553_getStep  int_ds3553.o
-    0x08006008   0x08006008   0x00000084   Code   RO          521    i.int_GPS_Init      int_gps.o
-    0x0800608c   0x0800608c   0x00000050   Code   RO          522    i.int_GPS_ReadData  int_gps.o
-    0x080060dc   0x080060dc   0x0000001c   Code   RO          523    i.int_GPS_WriteCmd  int_gps.o
-    0x080060f8   0x080060f8   0x00000014   Code   RO          544    i.int_LoRa_init     int_lora.o
-    0x0800610c   0x0800610c   0x00000018   Code   RO          545    i.int_LoRa_send_data  int_lora.o
-    0x08006124   0x08006124   0x0000002c   Code   RO          524    i.int_gps_Rx_Callback  int_gps.o
-    0x08006150   0x08006150   0x0000003c   Code   RO          534    i.int_qs100_init    int_qs100.o
-    0x0800618c   0x0800618c   0x00000194   Code   RO          537    i.int_qs_sendCmd    int_qs100.o
-    0x08006320   0x08006320   0x00000050   Code   RO          916    i.internal_alloc    mc_w.l(mallocr.o)
-    0x08006370   0x08006370   0x00000048   Code   RO           10    i.main              main.o
-    0x080063b8   0x080063b8   0x0000030c   Code   RO          553    i.parse_gps_data    app_communication.o
-    0x080066c4   0x080066c4   0x000000bc   Code   RO          655    i.print             cjson.o
-    0x08006780   0x08006780   0x000000b2   Code   RO          656    i.print_array       cjson.o
-    0x08006832   0x08006832   0x00000002   PAD
-    0x08006834   0x08006834   0x00000154   Code   RO          657    i.print_number      cjson.o
-    0x08006988   0x08006988   0x00000174   Code   RO          658    i.print_object      cjson.o
-    0x08006afc   0x08006afc   0x00000010   Code   RO          659    i.print_string      cjson.o
-    0x08006b0c   0x08006b0c   0x00000174   Code   RO          660    i.print_string_ptr  cjson.o
-    0x08006c80   0x08006c80   0x00000104   Code   RO          661    i.print_value       cjson.o
-    0x08006d84   0x08006d84   0x0000006c   Code   RO          917    i.realloc           mc_w.l(mallocr.o)
-    0x08006df0   0x08006df0   0x00000006   Code   RO          666    i.suffix_object     cjson.o
-    0x08006df6   0x08006df6   0x00000024   Code   RO          667    i.update_offset     cjson.o
-    0x08006e1a   0x08006e1a   0x00000012   Data   RO          206    .constdata          stm32f1xx_hal_rcc.o
-    0x08006e2c   0x08006e2c   0x00000012   Data   RO          213    .constdata          stm32f1xx_hal_rcc_ex.o
-    0x08006e3e   0x08006e3e   0x00000018   Data   RO          507    .constdata          system_stm32f1xx.o
-    0x08006e56   0x08006e56   0x00000002   PAD
-    0x08006e58   0x08006e58   0x000000c8   Data   RO          749    .constdata          ebyte_e220x.o
-    0x08006f20   0x08006f20   0x00000020   Data   RO          764    .constdata          ebyte_core.o
-    0x08006f40   0x08006f40   0x00000040   Data   RO          980    .constdata          mc_w.l(ctype_c.o)
-    0x08006f80   0x08006f80   0x0000000d   Data   RO           12    .conststring        main.o
-    0x08006f8d   0x08006f8d   0x00000003   PAD
-    0x08006f90   0x08006f90   0x0000004b   Data   RO          555    .conststring        app_communication.o
-    0x08006fdb   0x08006fdb   0x00000001   PAD
-    0x08006fdc   0x08006fdc   0x00000020   Data   RO          981    Region$$Table       anon$$obj.o
+    0x080059c4   0x080059c4   0x0000000c   Code   RO          550    i.app_communication_init  app_communication.o
+    0x080059d0   0x080059d0   0x00000200   Code   RO          551    i.app_communication_send  app_communication.o
+    0x08005bd0   0x08005bd0   0x0000003c   Code   RO          569    i.cJSON_AddNumberToObject  cjson.o
+    0x08005c0c   0x08005c0c   0x00000034   Code   RO          572    i.cJSON_AddStringToObject  cjson.o
+    0x08005c40   0x08005c40   0x00000064   Code   RO          583    i.cJSON_CreateNumber  cjson.o
+    0x08005ca4   0x08005ca4   0x00000018   Code   RO          584    i.cJSON_CreateObject  cjson.o
+    0x08005cbc   0x08005cbc   0x00000034   Code   RO          587    i.cJSON_CreateString  cjson.o
+    0x08005cf0   0x08005cf0   0x00000060   Code   RO          591    i.cJSON_Delete      cjson.o
+    0x08005d50   0x08005d50   0x0000001a   Code   RO          621    i.cJSON_New_Item    cjson.o
+    0x08005d6a   0x08005d6a   0x00000002   PAD
+    0x08005d6c   0x08005d6c   0x00000014   Code   RO          629    i.cJSON_PrintUnformatted  cjson.o
+    0x08005d80   0x08005d80   0x00000038   Code   RO          639    i.cJSON_strdup      cjson.o
+    0x08005db8   0x08005db8   0x00000002   Code   RO          641    i.cast_away_const   cjson.o
+    0x08005dba   0x08005dba   0x00000002   PAD
+    0x08005dbc   0x08005dbc   0x00000074   Code   RO          642    i.compare_double    cjson.o
+    0x08005e30   0x08005e30   0x000000b8   Code   RO          644    i.ensure            cjson.o
+    0x08005ee8   0x08005ee8   0x0000001c   Code   RO           47    i.fputc             usart.o
+    0x08005f04   0x08005f04   0x00000010   Code   RO          552    i.get_Step          app_communication.o
+    0x08005f14   0x08005f14   0x00000004   Code   RO          646    i.get_decimal_point  cjson.o
+    0x08005f18   0x08005f18   0x0000004c   Code   RO          515    i.int_DS3553_Reg_Init  int_ds3553.o
+    0x08005f64   0x08005f64   0x000000a0   Code   RO          516    i.int_DS3553_getStep  int_ds3553.o
+    0x08006004   0x08006004   0x00000084   Code   RO          521    i.int_GPS_Init      int_gps.o
+    0x08006088   0x08006088   0x00000050   Code   RO          522    i.int_GPS_ReadData  int_gps.o
+    0x080060d8   0x080060d8   0x0000001c   Code   RO          523    i.int_GPS_WriteCmd  int_gps.o
+    0x080060f4   0x080060f4   0x00000014   Code   RO          544    i.int_LoRa_init     int_lora.o
+    0x08006108   0x08006108   0x00000018   Code   RO          545    i.int_LoRa_send_data  int_lora.o
+    0x08006120   0x08006120   0x0000002c   Code   RO          524    i.int_gps_Rx_Callback  int_gps.o
+    0x0800614c   0x0800614c   0x00000050   Code   RO          916    i.internal_alloc    mc_w.l(mallocr.o)
+    0x0800619c   0x0800619c   0x00000048   Code   RO           10    i.main              main.o
+    0x080061e4   0x080061e4   0x0000030c   Code   RO          553    i.parse_gps_data    app_communication.o
+    0x080064f0   0x080064f0   0x000000bc   Code   RO          655    i.print             cjson.o
+    0x080065ac   0x080065ac   0x000000b2   Code   RO          656    i.print_array       cjson.o
+    0x0800665e   0x0800665e   0x00000002   PAD
+    0x08006660   0x08006660   0x00000154   Code   RO          657    i.print_number      cjson.o
+    0x080067b4   0x080067b4   0x00000174   Code   RO          658    i.print_object      cjson.o
+    0x08006928   0x08006928   0x00000010   Code   RO          659    i.print_string      cjson.o
+    0x08006938   0x08006938   0x00000174   Code   RO          660    i.print_string_ptr  cjson.o
+    0x08006aac   0x08006aac   0x00000104   Code   RO          661    i.print_value       cjson.o
+    0x08006bb0   0x08006bb0   0x0000006c   Code   RO          917    i.realloc           mc_w.l(mallocr.o)
+    0x08006c1c   0x08006c1c   0x00000006   Code   RO          666    i.suffix_object     cjson.o
+    0x08006c22   0x08006c22   0x00000024   Code   RO          667    i.update_offset     cjson.o
+    0x08006c46   0x08006c46   0x00000012   Data   RO          206    .constdata          stm32f1xx_hal_rcc.o
+    0x08006c58   0x08006c58   0x00000012   Data   RO          213    .constdata          stm32f1xx_hal_rcc_ex.o
+    0x08006c6a   0x08006c6a   0x00000018   Data   RO          507    .constdata          system_stm32f1xx.o
+    0x08006c82   0x08006c82   0x00000002   PAD
+    0x08006c84   0x08006c84   0x000000c8   Data   RO          749    .constdata          ebyte_e220x.o
+    0x08006d4c   0x08006d4c   0x00000020   Data   RO          764    .constdata          ebyte_core.o
+    0x08006d6c   0x08006d6c   0x00000040   Data   RO          980    .constdata          mc_w.l(ctype_c.o)
+    0x08006dac   0x08006dac   0x0000000d   Data   RO           12    .conststring        main.o
+    0x08006db9   0x08006db9   0x00000003   PAD
+    0x08006dbc   0x08006dbc   0x0000004b   Data   RO          555    .conststring        app_communication.o
+    0x08006e07   0x08006e07   0x00000001   PAD
+    0x08006e08   0x08006e08   0x00000020   Data   RO          981    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08006ffc, Size: 0x00001f40, Max: 0x00005000, ABSOLUTE, COMPRESSED[0x00000038])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08006e28, Size: 0x00001f40, Max: 0x00005000, ABSOLUTE, COMPRESSED[0x00000038])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3255,7 +3250,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      1456        380         75          2       1080          0   app_communication.o
+      1452        380         75          2       1080          0   app_communication.o
       2736        120          0         20          0          0   cjson.o
       1100        388          0          0          0          0   ebyte_callback.o
          0          0         32          0          0          0   ebyte_core.o
@@ -3266,7 +3261,7 @@ Image component sizes
        236         30          0          3          0          0   int_ds3553.o
        284         78          0          2       1024          0   int_gps.o
         44          8          0          0          0          0   int_lora.o
-       464        118          0          6       2048          0   int_qs100.o
+         0          0          0          6       2048          0   int_qs100.o
        214          8         13       1034          0          0   main.o
        108         22          0          0         20          0   rtc.o
        200         20          0          0         88          0   spi.o
@@ -3288,7 +3283,7 @@ Image component sizes
        580         60          0          0        216          0   usart.o
 
     ----------------------------------------------------------------------
-     21032       1740        654       1096       6892          0   Object Totals
+     20564       1622        654       1096       6892          0   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         24          0          6          8          9          0   (incl. Padding)
 
@@ -3369,15 +3364,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     27950       1922        718       1108       6892          0   Grand Totals
-     27950       1922        718         56       6892          0   ELF Image Totals (compressed)
-     27950       1922        718         56          0          0   ROM Totals
+     27482       1804        718       1108       6892          0   Grand Totals
+     27482       1804        718         56       6892          0   ELF Image Totals (compressed)
+     27482       1804        718         56          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                28668 (  28.00kB)
+    Total RO  Size (Code + RO Data)                28200 (  27.54kB)
     Total RW  Size (RW Data + ZI Data)              8000 (   7.81kB)
-    Total ROM Size (Code + RO Data + RW Data)      28724 (  28.05kB)
+    Total ROM Size (Code + RO Data + RW Data)      28256 (  27.59kB)
 
 ==============================================================================
 
